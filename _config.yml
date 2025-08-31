@@ -217,6 +217,21 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
+katex:
+  version: "0.16.8"
+  # 确保启用 KaTeX
+  active: true  # 新增此行
+  options:
+    delimiters:
+      - left: '$'
+        right: '$'
+        display: false
+      - left: '$$'
+        right: '$$'
+        display: true
+  extensions:
+    - "boldsymbol.js"
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
