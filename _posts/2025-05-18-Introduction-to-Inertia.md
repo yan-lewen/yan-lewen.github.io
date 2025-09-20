@@ -165,7 +165,17 @@ $$
   $$
   \frac{d}{dt}(\mathbf{J}\mathbf{w}) =\mathbf{J}\frac{d\mathbf{w}}{dt}+ \mathbf{\omega} \times (\mathbf{J}\mathbf{w})
   $$
-
+- 也写作：
+  $$
+  \begin{cases}
+  M_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 \\
+  M_2 = I_2 \dot{\omega}_2 + (I_1 - I_3)\omega_3\omega_1 \\
+  M_3 = I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1\omega_2 \\
+  \end{cases}
+  $$
+  - $ M_i $（力矩分量）：Body系下外力矩的分量
+  - $ I_i $（转动惯量）：Body系下各主轴的转动惯量
+  - $ \omega_i $（角速度分量）：Body系下的角速度分量
 ---
 
 ### 3.2 四旋翼欧拉方程及陀螺项
