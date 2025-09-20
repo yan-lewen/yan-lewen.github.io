@@ -1,6 +1,6 @@
 ---
 title: 自抗扰控制（ADRC）与扩张状态观测器（ESO）
-date: 2025-05-16
+date: 2025-08-16
 categories: [控制理论, 鲁棒控制]
 tags: [ADRC, ESO, 极点配置, 滤波, 跟踪微分器]
 math: true
