@@ -1,6 +1,6 @@
 ---
 title: PPO控制倒立摆
-date: 2025-05-11
+date: 2025-08-31
 categories: [强化学习, 控制理论]
 tags: [PPO, 倒立摆, 连续控制, Actor-Critic, GAE]
 math: true

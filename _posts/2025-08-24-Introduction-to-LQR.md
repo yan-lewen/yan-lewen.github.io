@@ -1,6 +1,6 @@
 ---
 title: 倒立摆仿真与LQR控制实现
-date: 2025-05-11
+date: 2025-08-2
 categories: [控制理论, 仿真实现]
 tags: [LQR, 倒立摆, 控制算法, Python, 仿真]
 math: true

@@ -1,6 +1,6 @@
 ---
 title: 现代控制方法学习总结
-date: 2025-05-11
+date: 2025-08-10
 categories: [控制理论, 自动化技术]
 tags: [控制方法, 鲁棒控制, PID, 滑模控制, MPC]
 math: true

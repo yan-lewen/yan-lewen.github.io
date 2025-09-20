@@ -1,6 +1,6 @@
 ---
 title: 模型预测控制（MPC）简介
-date: 2025-05-11
+date: 2025-07-01
 categories: [控制理论, 优化控制]
 tags: [MPC, Automatic]
 math: true

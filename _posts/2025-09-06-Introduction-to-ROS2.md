@@ -1,6 +1,6 @@
 ---
 title: ROS2 学习记录
-date: 2025-05-11
+date: 2025-09-06
 categories: [机器人, 操作系统]
 tags: [ROS2, 机器人, 开发框架, 仿真]
 math: false

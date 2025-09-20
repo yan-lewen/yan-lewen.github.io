@@ -1,6 +1,6 @@
 ---
 title: 飞行器动力学与惯量张量
-date: 2025-05-11
+date: 2025-09-19
 categories: [控制理论, 优化控制]
 tags: [MPC, Automatic]
 math: true
@@ -150,7 +150,7 @@ $$
 
 ### 3.1 刚体角动量变化率公式
 
-- 定义：惯量张量$$\mathbf{J}$$，角速度向量$$\mathbf{w}$$，角速度反对称矩阵$$[\mathbf{\omega}]_\times$$
+- 定义：Body系下各主轴的转动惯量惯量张量$$\mathbf{J}$$，Body系下角速度向量$$\mathbf{w}$$，角速度反对称矩阵$$[\mathbf{\omega}]_\times$$
 - 利用乘积法则（莱布尼茨法则）对$$\mathbf{J}\mathbf{w}$$求导，得到
   $$
   \frac{d}{dt}(\mathbf{J}\mathbf{w}) = \frac{d\mathbf{J}}{dt}\mathbf{w} + \mathbf{J}\frac{d\mathbf{w}}{dt}
@@ -166,6 +166,7 @@ $$
   \frac{d}{dt}(\mathbf{J}\mathbf{w}) =\mathbf{J}\frac{d\mathbf{w}}{dt}+ \mathbf{\omega} \times (\mathbf{J}\mathbf{w})
   $$
 - 也写作：
+
   $$
   \begin{cases}
   M_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 \\
@@ -173,9 +174,7 @@ $$
   M_3 = I_3 \dot{\omega}_3 + (I_2 - I_1)\omega_1\omega_2 \\
   \end{cases}
   $$
-  - $ M_i $（力矩分量）：Body系下外力矩的分量
-  - $ I_i $（转动惯量）：Body系下各主轴的转动惯量
-  - $ \omega_i $（角速度分量）：Body系下的角速度分量
+
 ---
 
 ### 3.2 四旋翼欧拉方程及陀螺项
