@@ -156,17 +156,21 @@ $$
   $$
   \frac{d}{dt}(\mathbf{J}\mathbf{w}) = \frac{d\mathbf{J}}{dt}\mathbf{w} + \mathbf{J}\frac{d\mathbf{w}}{dt}
   $$
-- 在空间坐标系下，惯量张量 $\mathbf{J}$ 会随时间变化。其导数为：
+- 在空间坐标系下，惯量张量 $\mathbf{J}$ 会随时间变化。其导数为
   $$
-  \frac{d\mathbf{J}}{dt}\mathbf{w} = ([\boldsymbol{\omega}]_\times \mathbf{J} - \mathbf{J} [\boldsymbol{\omega}]_\times)\mathbf{w}
+  \frac{d\mathbf{J}}{dt}\mathbf{w} = ([\mathbf{\omega}]_\times \mathbf{J} - \mathbf{J} [\mathbf{\omega}]_\times)\mathbf{w}
   $$
-    - 因为 $[\boldsymbol{\omega}]_\times \mathbf{J}\mathbf{w} = \boldsymbol{\omega} \times (\mathbf{J}\mathbf{w})$，所以前一项：$[\boldsymbol{\omega}]_\times \mathbf{J} \mathbf{w} = \boldsymbol{\omega} \times (\mathbf{J}\mathbf{w})$
-    - 因为 $[\boldsymbol{\omega}]_\times \mathbf{w} =  \mathbf{w}\times \mathbf{w} = 0$，所以后一项：$\mathbf{J}[\boldsymbol{\omega}]_\times  \mathbf{w} = 0$
+    - 因为$$[\mathbf{\omega}]_\times \mathbf{J}\mathbf{w} = \mathbf{\omega} \times (\mathbf{J}\mathbf{w})$$，所以前一项：$$[\mathbf{\omega}]_\times \mathbf{J} \mathbf{w} = \mathbf{\omega} \times (\mathbf{J}\mathbf{w})$$
+    - 因为$$[\mathbf{\omega}]_\times \mathbf{w} =  \mathbf{w}\times \mathbf{w} = 0$$，所以后一项：$$\mathbf{J}[\mathbf{\omega}]_\times  \mathbf{w} = 0$$
+  
 - 于是有：
+
   $$
   \frac{d}{dt}(\mathbf{J}\mathbf{w}) =\mathbf{J}\frac{d\mathbf{w}}{dt}+ \boldsymbol{\omega} \times (\mathbf{J}\mathbf{w})
   $$
+
 - 也写作：
+
   $$
   \begin{cases}
   M_1 = I_1 \dot{\omega}_1 + (I_3 - I_2)\omega_2\omega_3 \\
@@ -195,15 +199,18 @@ $$
 ### 4.1 向量旋转公式
 
 对于任意向量 $\mathbf{v}$ 绕单位向量 $\mathbf{u}$ 旋转角度 $\theta$ 后的新向量（这个公式基于数形结合得到）：
+
 $$
 \mathbf{v}_{\text{rot}} = \mathbf{v} \cos\theta + (\mathbf{u} \times \mathbf{v}) \sin\theta + \mathbf{u} (\mathbf{u} \cdot \mathbf{v})(1 - \cos\theta)
 $$
 
 考虑到：
-- 叉乘可写为：$\mathbf{u} \times \mathbf{v} = [\mathbf{u}]_\times \mathbf{v}$，其中 $[\mathbf{u}]_\times$ 是 $\mathbf{u}$ 的反对称矩阵
-- 内积的乘法可写为：$\mathbf{u} (\mathbf{u} \cdot \mathbf{v}) = (\mathbf{u} \mathbf{u}^\mathrm{T}) \mathbf{v}$，其中 $\mathbf{u} \mathbf{u}^\mathrm{T}$ 是 $\mathbf{u}$ 的外积矩阵
+- 叉乘可写为：$$\mathbf{u} \times \mathbf{v} = [\mathbf{u}]_\times \mathbf{v}$$，其中$$[\mathbf{u}]_\times$$是$$\mathbf{u}$$的反对称矩阵；
+  
+- 内积的乘法可写为：$$\mathbf{u} (\mathbf{u} \cdot \mathbf{v}) = (\mathbf{u} \mathbf{u}^\mathrm{T}) \mathbf{v}$$，其中$$\mathbf{u} \mathbf{u}^\mathrm{T}$$是$$\mathbf{u}$$的外积矩阵。
 
 所以有：
+
 $$
 \begin{align*}
 \mathbf{v}_{\text{rot}}
@@ -213,7 +220,9 @@ $$
 \end{align*}
 $$
 
-又由于 $\mathbf{v}_{\text{rot}}  = \mathbf{R} \mathbf{v}$，所以 $\mathbf{R} = I + [\mathbf{u}]_\times \sin\theta + [\mathbf{u}]_\times^2 (1 - \cos\theta)$。下一节证明。
+又由于$$ \mathbf{\mathbf{v}_{\text{rot}}}  = \mathbf{R} \mathbf{v}$$
+
+所以问题是$$\mathbf{R} = I + [\mathbf{u}]_\times \sin\theta + [\mathbf{u}]_\times^2 (1 - \cos\theta)$$吗？下一节证明。
 
 ### 4.2 从矩阵指数到 Rodrigues 公式的推导
 
@@ -242,14 +251,15 @@ $$
 \exp([\mathbf{u}]_\times \theta) = I + ([\mathbf{u}]_\times \theta) + \frac{([\mathbf{u}]_\times \theta)^2}{2!} + \frac{([\mathbf{u}]_\times \theta)^3}{3!} + \cdots
 $$
 
-利用反对称矩阵的循环性质：$[\mathbf{u}]_\times^3 = -[\mathbf{u}]_\times$，$[\mathbf{u}]_\times^4 = -[\mathbf{u}]_\times^2$，$[\mathbf{u}]_\times^5 = [\mathbf{u}]_\times$。
+利用反对称矩阵的循环性质：$$[\mathbf{u}]_\times^3 = -[\mathbf{u}]_\times$$，$$[\mathbf{u}]_\times^4 = -[\mathbf{u}]_\times^2$$，$$[\mathbf{u}]_\times^5 = [\mathbf{u}]_\times$$
 
 将级数按奇偶次幂分组：
 
-- **奇次幂项**：$\theta[\mathbf{u}]_\times - \frac{\theta^3}{3!}[\mathbf{u}]_\times + \frac{\theta^5}{5!}[\mathbf{u}]_\times - \cdots = \sin\theta \cdot [\mathbf{u}]_\times$
-- **偶次幂项**：$\frac{\theta^2}{2!}[\mathbf{u}]_\times^2 - \frac{\theta^4}{4!}[\mathbf{u}]_\times^2 + \cdots = (1 - \cos\theta) \cdot [\mathbf{u}]_\times^2$
+- **奇次幂项**：$$\theta[\mathbf{u}]_\times - \frac{\theta^3}{3!}[\mathbf{u}]_\times + \frac{\theta^5}{5!}[\mathbf{u}]_\times - \cdots = \sin\theta \cdot [\mathbf{u}]_\times$$
+- **偶次幂项**：$$\frac{\theta^2}{2!}[\mathbf{u}]_\times^2 - \frac{\theta^4}{4!}[\mathbf{u}]_\times^2 + \cdots = (1 - \cos\theta) \cdot [\mathbf{u}]_\times^2$$
 
 最终得到简洁形式：
+
 $$
 \mathbf{R} = \exp([\mathbf{u}]_\times \theta) = I + [\mathbf{u}]_\times \sin\theta + [\mathbf{u}]_\times^2 (1 - \cos\theta)
 $$
