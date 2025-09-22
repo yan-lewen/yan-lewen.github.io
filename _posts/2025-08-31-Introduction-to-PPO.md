@@ -14,12 +14,7 @@ math: true
 
 <img src="/assets/img/Inverted_pendulum.png" alt="倒立摆模型" style="zoom:40%;" />
 
-### 1.2 控制效果
-
-![倒立摆动画演示](./assets/img/pendulum_ppo.gif)
-
----
-### 1.3 拉格朗日方程推导
+### 1.2 拉格朗日方程推导
 
 - **系统动能**：
   $$ 
@@ -36,7 +31,7 @@ math: true
   \mathcal{L} = T - V = \frac{1}{2}(M + m)\dot{x}^2 + \frac{2}{3}ml^2\dot{\theta}^2 + ml\dot{x}\dot{\theta}\cos\theta - mgl\cos\theta
   $$
 
-### 1.4 运动方程推导
+### 1.3 运动方程推导
 
 - **关于 $x$ 的欧拉-拉格朗日方程**：
   $$
@@ -49,6 +44,13 @@ math: true
   \frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial\dot{\theta}}\right) - \frac{\partial\mathcal{L}}{\partial\theta} = 0 \\ 
   \Rightarrow \frac{4}{3}ml^2\ddot{\theta} + ml\ddot{x}\cos\theta - mgl\sin\theta = 0
   $$
+  
+### 1.4 控制效果
+
+![倒立摆动画演示](./assets/img/pendulum_ppo.gif)
+
+---
+
 
 ## 二. PPO与Actor-Critic算法原理
 
