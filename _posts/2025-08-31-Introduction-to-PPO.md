@@ -1,8 +1,8 @@
 ---
-title: PPO控制倒立摆
+title: 倒立摆仿真与PPO控制实现
 date: 2025-08-31
 categories: [强化学习, 控制理论]
-tags: [PPO, 倒立摆, 连续控制, Actor-Critic, GAE]
+tags: [PPO, 倒立摆, Actor-Critic, GAE]
 math: true
 ---
 
@@ -19,6 +19,36 @@ math: true
 ![倒立摆动画演示](./assets/img/pendulum_ppo.gif)
 
 ---
+### 1.3 拉格朗日方程推导
+
+- **系统动能**：
+  $$ 
+  T = \underbrace{\frac{1}{2}M\dot{x}^2}_{\text{小车动能}} + \underbrace{\frac{1}{2}m\left(\dot{x}^2 + l^2\dot{\theta}^2 + 2l\dot{x}\dot{\theta}\cos\theta\right) + \frac{1}{2}\frac{1}{12}m(2l)^2\dot{\theta}^2}_{\text{杆的动能}}
+  $$
+
+- **系统势能**：
+  $$
+  V = mgl\cos\theta
+  $$
+
+- **拉格朗日函数**：
+  $$
+  \mathcal{L} = T - V = \frac{1}{2}(M + m)\dot{x}^2 + \frac{2}{3}ml^2\dot{\theta}^2 + ml\dot{x}\dot{\theta}\cos\theta - mgl\cos\theta
+  $$
+
+### 1.4 运动方程推导
+
+- **关于 $x$ 的欧拉-拉格朗日方程**：
+  $$
+  \frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) - \frac{\partial\mathcal{L}}{\partial x} = F \\ 
+  \Rightarrow (M + m)\ddot{x} + ml\ddot{\theta}\cos\theta - ml\dot{\theta}^2\sin\theta = F
+  $$
+
+- **关于 $\theta$ 的欧拉-拉格朗日方程**：
+  $$
+  \frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial\dot{\theta}}\right) - \frac{\partial\mathcal{L}}{\partial\theta} = 0 \\ 
+  \Rightarrow \frac{4}{3}ml^2\ddot{\theta} + ml\ddot{x}\cos\theta - mgl\sin\theta = 0
+  $$
 
 ## 二. PPO与Actor-Critic算法原理
 
