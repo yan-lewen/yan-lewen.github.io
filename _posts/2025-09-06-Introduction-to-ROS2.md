@@ -1,5 +1,5 @@
 ---
-title: ROS2 学习记录
+title: ROS2 学习记录与实践
 date: 2025-09-06
 categories: [机器人, 操作系统]
 tags: [ROS2, 机器人, 开发框架, 仿真]

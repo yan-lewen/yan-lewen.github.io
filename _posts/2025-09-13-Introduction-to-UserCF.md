@@ -1,5 +1,5 @@
 ---
-title: 推荐系统中的协同过滤与ALS矩阵分解学习
+title: 协同过滤与ALS矩阵分解学习
 date: 2025-09-13
 categories: [推荐系统, 算法原理]
 tags: [协同过滤, ALS, 隐语义, Python, FAISS]
