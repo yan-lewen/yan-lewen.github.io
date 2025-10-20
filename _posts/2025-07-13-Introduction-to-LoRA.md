@@ -80,7 +80,7 @@ llm_finetune_demo/
   \mathbf{E} \in \mathbb{R}^{|V| \times d}
   $$
 
-  其中 $|V| $ 为词表大小，$d$ 为嵌入维度。
+  其中 $V$ 为词表大小， $d$ 为嵌入维度。
 
 - **流程**：
 
