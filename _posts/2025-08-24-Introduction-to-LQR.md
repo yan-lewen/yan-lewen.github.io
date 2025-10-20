@@ -211,7 +211,7 @@ class LQRController():
 
 ### 3.3 仿真结果与可视化
 
-![倒立摆动画演示](./assets/img/pendulum_lqr.gif)
+![倒立摆动画演示](/assets/img/pendulum_lqr.gif)
 
 > **Note**: 仿真采用四阶龙格-库塔法进行数值积分，确保计算精度和稳定性。
 

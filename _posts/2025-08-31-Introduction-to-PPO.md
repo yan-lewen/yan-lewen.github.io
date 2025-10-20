@@ -47,7 +47,7 @@ math: true
   
 ### 1.4 控制效果
 
-![倒立摆动画演示](./assets/img/pendulum_ppo.gif)
+![倒立摆动画演示](/assets/img/pendulum_ppo.gif)
 
 ---
 
