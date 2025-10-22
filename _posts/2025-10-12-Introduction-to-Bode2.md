@@ -47,13 +47,13 @@ $$
 
 #### 2.2.2 开环穿越频率 ($\omega_c$) 计算
 
-开环穿越频率 $\omega_c$ 是开环增益 $|L(j\omega)| = 1$（即 $0\text{ dB}$）时的频率：
+开环穿越频率 $\omega_c$ 是开环增益 $\|L(j\omega)\|= 1$（即 $0\text{ dB}$）时的频率：
 
 $$
 |L(j\omega)| = \left|\frac{k}{j\omega}\right| = \frac{k}{\omega}
 $$
 
-令 $|L(j\omega_c)| = 1$：
+令 $\|L(j\omega_c)\|= 1$：
 
 $$
 \frac{k}{\omega_c} = 1 \implies \omega_c = k
@@ -63,7 +63,7 @@ $$
 
 #### 2.2.3 闭环带宽 ($\omega_B$) 计算
 
-闭环带宽 $\omega_B$ 是闭环增益 $|T(j\omega)|$ 下降至直流增益 $T(0)$ 的 $1/\sqrt{2}$ 倍（$-3\text{ dB}$）时的频率：
+闭环带宽 $\omega_B$ 是闭环增益 $\|T(j\omega)\|$ 下降至直流增益 $T(0)$ 的 $1/\sqrt{2}$ 倍（$-3\text{ dB}$）时的频率：
 
 $$
 T(0) = \lim_{s \to 0} \frac{k}{s + k} = 1
@@ -73,7 +73,7 @@ $$
 |T(j\omega)| = \left|\frac{k}{j\omega + k}\right| = \frac{k}{\sqrt{\omega^2 + k^2}}
 $$
 
-令 $|T(j\omega_B)| = 1/\sqrt{2}$：
+令 $\|T(j\omega_B)\| = 1/\sqrt{2}$：
 
 $$
 \frac{k}{\sqrt{\omega_B^2 + k^2}} = \frac{1}{\sqrt{2}} \implies \omega_B^2 + k^2 = 2k^2 \implies \omega_B = k

@@ -161,11 +161,13 @@ m\ddot{x} + c\dot{x} + k_p x = -k_c \dot{x}(t - \tau)
 $$
 
 将控制力代入系统方程，得到：
+
 $$
 ms^2 X(s) + cs X(s) + k_p X(s) + k_c s e^{-\tau s} X(s) = F_{ext}(s)
 $$
 
 闭环传递函数（外部扰动 $F_{ext}(s)$ 为输入，$X(s)$ 为输出）为：
+
 $$
 T(s) = \frac{X(s)}{F_{ext}(s)} = \frac{1}{ms^2 + cs + k_p + k_c s e^{-\tau s}}
 $$
